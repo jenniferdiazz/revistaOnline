@@ -1,0 +1,40 @@
+.container-off-canvas{
+    display: grid;
+    .section1{
+        display: none;
+    }
+    .section2{
+        height: 100vh;
+        background-color: $secondary;
+    }
+.section3{
+    display: none;
+}
+@include respond-to($bp-sm){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .section2{
+        background-color: $secondary;
+    }
+    .section3{
+        display: initial;
+    }
+
+}
+@include respond-to($bp-md){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .section1{
+        display: initial;
+    }
+}
+@include respond-to($bp-lg){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    .section1{
+        display: initial;
+    }
+}
+}

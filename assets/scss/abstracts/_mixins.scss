@@ -1,0 +1,14 @@
+@mixin link-clean {
+    
+        text-decoration: none;
+        color: $secondary;
+    }
+@mixin border-primary($type, $border_size:$border-xl)
+{
+    border:$border_size $type $primary
+}
+@mixin respond-to($breakpoint){
+    @media(min-width:$breakpoint){
+        @content
+    }
+}
